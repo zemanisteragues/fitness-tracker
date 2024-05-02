@@ -1,6 +1,7 @@
 import React from 'react'
 
 const WorkoutDetails = ({workout}) => {
+  console.log('this is the workout: ', workout);
   return (
     <div className='workout-details'>
         <h4>{workout.title}</h4>

@@ -32,6 +32,7 @@ const WorkoutForm = () => {
 
             console.trace("New Workout created", json);
         }
+        window.location.reload();
     };
     return (
         <form className='create' onSubmit={handleSubmit}>

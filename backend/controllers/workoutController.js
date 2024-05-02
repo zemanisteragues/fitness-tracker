@@ -58,11 +58,11 @@ const deleteWorkout = async (req, res) => {
         res.status(404).json({ error: 'Invalid id' });
     }
     const workout = await Workout.findOneAndDelete({ _id: id });
-
+    const allWorkouts = await Workout.find();
     if (!workout) {
         res.status(400).json({ error: 'Not such workout' });
     }
-    res.status(200).json(workout);
+    res.status(200).json(allWorkouts);
 };
 
 
